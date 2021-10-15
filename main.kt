@@ -7,7 +7,9 @@ fun comp (enteredNumber: String): String{
     var tempNumber = enteredNumber
     do {
         for (element in tempNumber) {
-            temp *= element.digitToInt()
+            if (element.digitToInt() != 0){
+                temp *= element.digitToInt()
+        }
         }
         tempNumber = sum.toString()
         temp = 1
