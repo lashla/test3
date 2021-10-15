@@ -3,14 +3,14 @@ fun main() {
     println(comp(enteredNumber))
 }
 fun comp (enteredNumber: String): String{
-   var sum: Int = 1;
+   var temp: Int = 1;
     var tempNumber = enteredNumber
     do {
         for (element in tempNumber) {
-            sum *= element.digitToInt()
+            temp *= element.digitToInt()
         }
         tempNumber = sum.toString()
-        sum = 1
+        temp = 1
     } while (tempNumber.length > 1)
     return tempNumber
 }
