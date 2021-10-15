@@ -1,15 +1,16 @@
 fun main() {
-    var num1 = readLine()!!.toString()
-    println(comp(num1))
+    var enteredNumber = readLine()!!.toString()
+    println(comp(enteredNumber))
 }
-fun comp (num1: String): String{
+fun comp (enteredNumber: String): String{
    var sum: Int = 1;
-   var num2 = num1;
-    do{
-    for (num in 1 until num2.length){
-        sum *= num2[num].digitToInt()
-   }
-   num2 = sum.toString()
-    } while (num2.length != 1)
-    return num2
+    var tempNumber = enteredNumber
+    do {
+        for (element in tempNumber) {
+            sum *= element.toChar().digitToInt()
+        }
+        tempNumber = sum.toString()
+        sum = 1
+    } while (tempNumber.length > 1)
+    return tempNumber
 }
